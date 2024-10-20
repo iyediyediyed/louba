@@ -2,6 +2,28 @@
 <html>
 <head>
   <title>Casino Heist Website</title>
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Password Protected Content</title>
+    <script>
+        function checkPassword() {
+            var password = prompt("Please enter the password to view the content:");
+            if (password === "kali123@") {
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <div id="content" style="display: none;">
+        <h1>Welcome to the password-protected content!</h1>
+        <p>This is the content that you can access after entering the correct password.</p>
+    </div>
+</body>
+</html>
   <style>
     body {
       margin: 0;
